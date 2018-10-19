@@ -55,4 +55,4 @@ partitionList(node, x){
     return list;
   }
 }
-module.export = LinkedList;
+module.exports = LinkedList;

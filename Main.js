@@ -1,5 +1,5 @@
 var Node = require('./Node.js');
-var LinkedList = require('./LinkedList');
+var LinkedList = require('./LinkedList.js');
 
 var n1 = new Node(5);
 var n2 = new Node(7);
