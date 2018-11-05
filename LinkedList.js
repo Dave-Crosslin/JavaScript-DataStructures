@@ -21,12 +21,6 @@ this.head = head;
         previous.next = new_node;
         return;
       }
-      /*if(current.data > x && previous === undefined){
-        new_node.next = current;
-        this.head = new_node;
-        isTail = false;
-        break;
-      }*/
       previous = current;
       node = node.next;
     }
@@ -53,6 +47,28 @@ partitionList(node, x){
     tail.next = null;
     var list = new LinkedList(head);
     return list;
+  }
+  getLength(){
+    let result = 0;
+    let node = this.head;
+
+    while(node != null){
+      result ++;
+      node = node.next;
+    }
+    return result;
+  }
+    getTail(){
+      let result;
+      let node = this.head;
+
+      while(node != null){
+        if(node.next === null){
+          result = node;
+        }
+        node = node.next;
+    }
+    return result;
   }
 }
 module.exports = LinkedList;
