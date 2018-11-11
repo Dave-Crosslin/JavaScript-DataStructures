@@ -1,6 +1,7 @@
 var Node = require('./Node.js');
 var LinkedList = require('./LinkedList.js');
 var Extension = require('./helperFunctions.js');
+var ListStack = require('./ListStack.js');
 let ext = new Extension();
 
 var n1 = new Node(5);
@@ -24,7 +25,16 @@ n6.next = n7;
 var listA = new LinkedList(n1);
 var listB = new LinkedList(n1b);
 
+/*let result = ext.getIntersectingNode(listA, listB);
+console.log(result);*/
 
+//------------------------------------------------------------------
+//stacks and queues
 
-let result = ext.getIntersectingNode(listA, listB);
-console.log(result);
+var stack = new ListStack(3);
+stack.push(7);
+stack.push(5);
+stack.print();
+console.log('----------------');
+stack.pop();
+stack.print();
