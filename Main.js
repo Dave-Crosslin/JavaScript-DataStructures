@@ -2,6 +2,7 @@ var Node = require('./Node.js');
 var LinkedList = require('./LinkedList.js');
 var Extension = require('./helperFunctions.js');
 var ListStack = require('./ListStack.js');
+var ArrayStack = require('./ArrayStack.js');
 let ext = new Extension();
 
 var n1 = new Node(5);
@@ -30,11 +31,11 @@ console.log(result);*/
 
 //------------------------------------------------------------------
 //stacks and queues
-
-var stack = new ListStack(3);
-stack.push(7);
-stack.push(5);
-stack.print();
-console.log('----------------');
-stack.pop();
-stack.print();
+var stackA = new ArrayStack();
+stackA.push(3);
+stackA.push(5);
+stackA.push(8);
+stackA.print();
+console.log('---------');
+stackA.pop();
+stackA.print();
