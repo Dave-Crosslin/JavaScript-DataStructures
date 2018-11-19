@@ -14,9 +14,13 @@ class Stack {
     this.head = n;
   }
   pop(){
+    let x = this.head;
     this.head = this.head.next;
+    return x;
   }
-
+  peek(){
+    return this.head;
+  }
   print(){
     let node = this.head;
     while(node !== null){

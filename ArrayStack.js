@@ -7,7 +7,9 @@ class stack{
     this.StackArray.push(x);
   }
   pop(){
-    this.StackArray.pop();
+
+    let x = this.StackArray.pop();
+    return x
   }
   print(){
     for(let i = 0; i < this.StackArray.length; i++){
