@@ -4,6 +4,7 @@ var Extension = require('./helperFunctions.js');
 var ListStack = require('./ListStack.js');
 var ArrayStack = require('./ArrayStack.js');
 var stackWithMin = require('./StackWithMin.js');
+var StackSet = require('./StackSet.js')
 let ext = new Extension();
 
 var n1 = new Node(5);
@@ -32,13 +33,11 @@ console.log(result);*/
 
 //------------------------------------------------------------------
 //stacks and queues
-var s = new stackWithMin(4);
-s.push(5);
-s.push(2);
-s.push(18);
-s.push(1);
-s.pop();
+let s = new StackSet(3);
+for(let i = 0; i < 13; i++){
+  s.push(i);
+}
 s.print();
-console.log('stack ^^^')
-s.printMin();
-console.log('min value ^^^')
+s.pop();
+console.log('--------');
+s.print();
