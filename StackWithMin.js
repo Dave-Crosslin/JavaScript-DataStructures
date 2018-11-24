@@ -1,8 +1,8 @@
 var ListStack = require('./ListStack.js');
 class stackWithMin extends ListStack{
 
-  constructor(x){
-  super(x);
+  constructor(){
+  super();
   this.stackM = new ListStack(x);
   }
 

@@ -2,20 +2,25 @@ var Node = require('./Node.js');
 var LinkedList = require('./LinkedList.js');
 
 class Stack {
-  constructor(x){
-  let n = new Node(x, null);
-  this.head = n;
-  this.stackList = new LinkedList(this.head);
+  constructor(){
+  this.isEmpty = true;
+  this.head = null;
+  this.stackList = new LinkedList();
   }
 
   push(x){
     let n = new Node(x);
     n.next = this.head;
     this.head = n;
+    this.isEmpty = false;
   }
   pop(){
+
     let x = this.head;
     this.head = this.head.next;
+    if(this.head === null){
+      this.isEmpty = true;
+    }
     return x;
   }
   peek(){

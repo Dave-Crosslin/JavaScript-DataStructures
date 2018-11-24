@@ -1,6 +1,6 @@
 class LinkedList {
-  constructor(head){
-this.head = head;
+  constructor(){
+this.head = null;
   }
 
   print(){

@@ -1,17 +1,25 @@
 var ListStack = require('./ListStack.js');
 class StackSet{
 
-  constructor(x){
-    this.topStack = new ListStack(x);
+  constructor(){
+    this.topStack = new ListStack();
     this.topStack.count = 1;
+    this.topStack.index = 0;
+    this.topStack.next = null;
+
   }
   push(x){
     if(this.topStack.count < 10){
       this.topStack.push(x);
+      this.topStack.count ++;
     }
     else{
-      this.topStack = this.topStack.next;
-      this.topStack = new ListStack(x);
+      let newStack = new ListStack();
+      newStack.push(x);
+      newStack.count = 1;
+      newStack.index = this.topStack.index + 1;
+      newStack.next = this.topStack;
+      this.topStack = newStack;
     }
   }
   pop(){
@@ -27,6 +35,17 @@ class StackSet{
       s = s.next;
     }
   }
+  popAt(x){
+    let s = this.topStack;
+    while(s != null){
+      if(s.index == x){
+        s.pop();
+        return;
+      }
+      s = s.next;
+    }
+  }
+
 }
 
 module.exports = StackSet;
